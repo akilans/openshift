@@ -47,12 +47,20 @@ $ oc login -u developer https://api.crc.testing:6443
 ### OC commands
 
 ```bash
+oc whoami # loggedin user name
+oc logout
 oc login
 oc get projects
+oc project #current project
+oc new-project my_project_1 #create new project
+oc project new_project # switches to the project
 oc get users
 oc get deployments|pods|services
 # add admin role to akilan user
 oc adm policy add-cluster-role-to-user cluster-admin akilan
+oc rsh $POD_NAME #login to shell
+oc delete pod $POD_NAME # delete pod
+oc get pods
 ```
 
 ### Ways to deploy to openshift
